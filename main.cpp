@@ -21,9 +21,9 @@ public:
         case '-':
             decrement();
             return false;
-        case 'x':           // английская раскладка
+        case 'x':           // Р°РЅРіР»РёР№СЃРєР°СЏ СЂР°СЃРєР»Р°РґРєР°
             return true;
-        case '\xF5':        // русская 
+        case '\xF5':        // СЂСѓСЃСЃРєР°СЏ 
             return true;
         default:
             std::cout << "Unknown operation.\n";
@@ -43,23 +43,23 @@ int main() {
     int initValue = 0;
     Counter counter;
 
-    std::cout << "Вы хотите указать начальное значение счётчика? Введите да или нет: ";
+    std::cout << "Р’С‹ С…РѕС‚РёС‚Рµ СѓРєР°Р·Р°С‚СЊ РЅР°С‡Р°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ СЃС‡С‘С‚С‡РёРєР°? Р’РІРµРґРёС‚Рµ РґР° РёР»Рё РЅРµС‚: ";
     while (true) {
         std::cin >> answer;
-        if (answer == "да" || answer == "нет") {
+        if (answer == "РґР°" || answer == "РЅРµС‚") {
             break;
         }
-        std::cout << "Пожалуйста, введите 'да' или 'нет': ";
+        std::cout << "РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ 'РґР°' РёР»Рё 'РЅРµС‚': ";
     }
 
-    if (answer == "да") {
-        std::cout << "Введите начальное значение счётчика: ";
+    if (answer == "РґР°") {
+        std::cout << "Р’РІРµРґРёС‚Рµ РЅР°С‡Р°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ СЃС‡С‘С‚С‡РёРєР°: ";
         while (true) {
             std::cin >> initValue;
             if (std::cin.fail()) {
                 std::cin.clear();
                 std::cin.ignore(INT_MAX, '\n');
-                std::cout << "Ошибка ввода. Пожалуйста, введите целое число: ";
+                std::cout << "РћС€РёР±РєР° РІРІРѕРґР°. РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ С†РµР»РѕРµ С‡РёСЃР»Рѕ: ";
             }
             else {
                 std::cin.ignore(INT_MAX, '\n');
@@ -72,7 +72,7 @@ int main() {
     char command;
     bool exitRequested = false;
     do {
-        std::cout << "Введите команду ('+', '-', '=' или 'x'): ";
+        std::cout << "Р’РІРµРґРёС‚Рµ РєРѕРјР°РЅРґСѓ ('+', '-', '=' РёР»Рё 'x'): ";
         std::cin >> command;
 
         if (command == '=') {
@@ -83,6 +83,6 @@ int main() {
         }
     } while (!exitRequested);
 
-    std::cout << "До свидания!\n";
+    std::cout << "Р”Рѕ СЃРІРёРґР°РЅРёСЏ!\n";
     return 0;
 }

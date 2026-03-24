@@ -23,7 +23,7 @@ public:
             return false;
         case 'x':           // английская раскладка
             return true;
-        case '\xF5':        // русская 
+        case '\xF5':        // русская х в этой кодировке
             return true;
         default:
             std::cout << "Unknown operation.\n";
